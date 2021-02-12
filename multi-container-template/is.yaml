@@ -1,0 +1,86 @@
+apiVersion: v1
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: "2021-02-11T18:28:05Z"
+    generation: 1
+    labels:
+      app: quotesapi
+      app.kubernetes.io/component: quotesapi
+      app.kubernetes.io/instance: quotesapi
+    managedFields:
+    - apiVersion: image.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/generated-by: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+      manager: oc
+      operation: Update
+      time: "2021-02-11T18:28:05Z"
+    name: quotesapi
+    namespace: stkousso-quotes-dev
+    resourceVersion: "121063500"
+    selfLink: /apis/image.openshift.io/v1/namespaces/stkousso-quotes-dev/imagestreams/quotesapi
+    uid: 6208f856-bc2c-48d1-8287-fd021e76f676
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/stkousso-quotes-dev/quotesapi
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.na45.prod.nextcle.com/stkousso-quotes-dev/quotesapi
+    tags:
+    - items:
+      - created: "2021-02-11T18:28:40Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/stkousso-quotes-dev/quotesapi@sha256:dc27d3e8195bcec7655d48e194737dce6eb9fe42f3ba992640b0882760e199d6
+        generation: 1
+        image: sha256:dc27d3e8195bcec7655d48e194737dce6eb9fe42f3ba992640b0882760e199d6
+      tag: latest
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/image.dockerRepositoryCheck: "2021-02-11T18:27:44Z"
+    creationTimestamp: "2021-02-11T18:27:44Z"
+    generation: 2
+    name: quotesdb
+    namespace: stkousso-quotes-dev
+    resourceVersion: "121062641"
+    selfLink: /apis/image.openshift.io/v1/namespaces/stkousso-quotes-dev/imagestreams/quotesdb
+    uid: ce18894e-9e00-4e68-96b0-959888291054
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: image-registry.openshift-image-registry.svc:5000/openshift/mysql:5.7
+      generation: 2
+      importPolicy: {}
+      name: "5.7"
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/stkousso-quotes-dev/quotesdb
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.na45.prod.nextcle.com/stkousso-quotes-dev/quotesdb
+    tags:
+    - items:
+      - created: "2021-02-11T18:27:44Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/openshift/mysql@sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+        generation: 2
+        image: sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+      tag: "5.7"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

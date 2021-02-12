@@ -1,0 +1,27 @@
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+    labels:
+      app: todoapp
+    name: todoapp
+  subsets:
+  - addresses:
+    - ip: 10.131.3.146
+      nodeName: na45-mh9qn-worker-x6rp4
+      targetRef:
+        kind: Pod
+        name: todoapp-1-p7bx4
+        namespace: stkousso-external-service
+    ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+    labels:
+      app: tododb
+      service.kubernetes.io/headless: ""
+    name: tododb
